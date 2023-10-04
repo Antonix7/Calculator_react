@@ -1,0 +1,8 @@
+.app-style {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 77v;
+    padding: 50px 200px;
+    background-color: black;
+}

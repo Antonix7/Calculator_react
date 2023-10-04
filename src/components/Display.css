@@ -1,0 +1,12 @@
+.Display-style {
+    background: #0000;
+    color: white;
+    text-align: right;
+    padding: 15px 10px;
+    width: 100%;
+}
+
+.Display-style > div {
+    font-size: 3em;
+    font-weight: bold;
+}

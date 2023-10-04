@@ -1,0 +1,49 @@
+.button-style {
+    display: inline-flex;
+    width: 25%;
+    flex: 1 0 auto;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background: #ccc;
+}
+
+.button-style.wide {
+    width: 50%;
+}
+
+.button-style button {
+    background: #e0e0e0;
+    border: 0;
+    font-size: 2em;
+    margin: 0 1px 0 0;
+    flex: 1 0 auto;
+}
+
+.button-style.orange button {
+    background: #f5923e;
+    color: #fff;
+}
+
+.button-style.orange button:hover {
+    background: #bf7433;
+}
+
+.button-style.gray button {
+    background: #5f9c4b;
+    color: #fff;
+}
+
+.button-style.gray button:hover {
+    background: #5bd035;
+}
+
+.button-style.green button {
+    background: #aaa;
+    color: #333;
+}
+
+.button-style.green button:hover {
+    background: #eee;
+}
