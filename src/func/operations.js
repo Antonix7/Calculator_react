@@ -37,4 +37,44 @@ export default function operations (stat, buttonValue) {
         return {}
     }
 
+    if (buttonValue === ".") {
+        if (stat.next) {
+            if (stat.next.include(".")) return {}
+
+            return {next: stat.next + "."}
+        }
+        return {next: "0."}
+    }
+
+    if (buttonValue === "=") {
+        if (stat.next) {
+            if (stat.next && stat.operator) {
+                return {total: operate(stat.total, stat.next, stat.operator),
+                next: null,
+                operator: null}
+            }
+        }
+        return {}
+    }
+
+    if (buttonValue === "+/-") {
+        if (stat.next) return {next: (-1 * parseFloat(stat.next).toString())}
+
+        if (stat.total) return {total: -1 * parseFloat(stat.total).toString()}
+    }
+
+    if (stat.operator) {
+        return {total: operate(stat.next, stat.total, stat.operator),
+        next: null,
+        operator: buttonValue}
+    }
+
+    if (!stat.next) return {operator: buttonValue}
+
+    return {
+        total: stat.next,
+        next: null,
+        operator: buttonValue
+    }
+
 }
